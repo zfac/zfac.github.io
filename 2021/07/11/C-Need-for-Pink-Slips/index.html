@@ -20,20 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;UVA12230 解题思路：">
+  <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1543&#x2F;problem&#x2F;C 解题思路：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA12230 过河 Crossing Rivers">
-<meta property="og:url" content="http://example.com/2021/07/10/UVA12230-%E8%BF%87%E6%B2%B3-Crossing-Rivers/index.html">
+<meta property="og:title" content="C. Need for Pink Slips">
+<meta property="og:url" content="http://example.com/2021/07/11/C-Need-for-Pink-Slips/index.html">
 <meta property="og:site_name" content="枫叶">
-<meta property="og:description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;UVA12230 解题思路：">
+<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1543&#x2F;problem&#x2F;C 解题思路：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-09T23:33:34.000Z">
-<meta property="article:modified_time" content="2021-07-09T23:37:57.771Z">
+<meta property="article:published_time" content="2021-07-11T13:53:29.000Z">
+<meta property="article:modified_time" content="2021-07-11T13:55:56.313Z">
 <meta property="article:author" content="FY">
 <meta property="article:tag" content="数学期望">
+<meta property="article:tag" content="概率">
+<meta property="article:tag" content="深搜">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/07/10/UVA12230-%E8%BF%87%E6%B2%B3-Crossing-Rivers/">
+<link rel="canonical" href="http://example.com/2021/07/11/C-Need-for-Pink-Slips/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>UVA12230 过河 Crossing Rivers | 枫叶</title>
+  <title>C. Need for Pink Slips | 枫叶</title>
   
 
 
@@ -161,7 +163,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/10/UVA12230-%E8%BF%87%E6%B2%B3-Crossing-Rivers/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/11/C-Need-for-Pink-Slips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +176,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          UVA12230 过河 Crossing Rivers
+          C. Need for Pink Slips
         </h1>
 
         <div class="post-meta">
@@ -185,7 +187,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-10 07:33:34 / 修改时间：07:37:57" itemprop="dateCreated datePublished" datetime="2021-07-10T07:33:34+08:00">2021-07-10</time>
+              <time title="创建时间：2021-07-11 21:53:29 / 修改时间：21:55:56" itemprop="dateCreated datePublished" datetime="2021-07-11T21:53:29+08:00">2021-07-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -208,11 +210,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/UVA12230">https://www.luogu.com.cn/problem/UVA12230</a></p>
+        <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1543/problem/C">https://codeforces.com/contest/1543/problem/C</a></p>
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><span id="more"></span>
 
-<p>遇到河的时候分别考虑最好的情况与最坏的情况，分别是l/v与3*l/v，然后求出他们的平均值就是2 *l/v,用陆地上地时间加上河流上的时间。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">typedef long double lf;</span><br><span class="line">typedef unsigned long long ull;</span><br><span class="line">typedef pair&lt;int,int&gt;P;</span><br><span class="line">typedef pair&lt;int,char&gt;Q;</span><br><span class="line">const int inf = 0x7f7f7f7f;</span><br><span class="line">const long long INF = 2e18;</span><br><span class="line">const unsigned long long base = 1313131;/*双hash知识点*/</span><br><span class="line">const long long base1 = 131;</span><br><span class="line">const long long mod =  1e9+7;</span><br><span class="line">const double PI = acos(-1);</span><br><span class="line">const int N = 1e6+10;</span><br><span class="line">inline int read()&#123;int x=0,f=1;char ch=getchar();while(ch&lt;&#x27;0&#x27;||ch&gt;&#x27;9&#x27;)&#123;if(ch==&#x27;-&#x27;)f=-1;ch=getchar();&#125;while(ch&gt;=&#x27;0&#x27;&amp;&amp;ch&lt;=&#x27;9&#x27;)&#123;x=x*10+ch-&#x27;0&#x27;;ch=getchar();&#125;return x*f;&#125;</span><br><span class="line">inline string readstring()&#123;string str;char s=getchar();while(s==&#x27; &#x27;||s==&#x27;\n&#x27;||s==&#x27;\r&#x27;)&#123;s=getchar();&#125;while(s!=&#x27; &#x27;&amp;&amp;s!=&#x27;\n&#x27;&amp;&amp;s!=&#x27;\r&#x27;)&#123;str+=s;s=getchar();&#125;return str;&#125;</span><br><span class="line">int random(int n)&#123;return (int)(rand()*rand())%n;&#125;</span><br><span class="line">void writestring(string s)&#123;int n = s.size();for(int i = 0;i &lt; n;i++)&#123;printf(&quot;%c&quot;,s[i]);&#125;&#125;</span><br><span class="line">/*</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11212</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17761</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11191</span><br><span class="line"> https://codeforces.com/contest/1539</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17905</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17583/B</span><br><span class="line"> */</span><br><span class="line">/*</span><br><span class="line">a[1] = 1;a[2] = 3;a[3] = 5;</span><br><span class="line">int k = lower_bound(a+1,a+4,3)-a;</span><br><span class="line">k = 2*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    //afreopen(&quot;E:/ACM/test/in.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    //freopen(&quot;E:/ACM/test/out.txt&quot;,&quot;w&quot;,stdout);</span><br><span class="line">    //srand((unsigned)time(NULL));</span><br><span class="line">    int n,d,cnt = 0;</span><br><span class="line">    while(cin &gt;&gt; n &gt;&gt; d)&#123;</span><br><span class="line">        if(n+d == 0) break;</span><br><span class="line">        double sum = d;</span><br><span class="line">        for(int i = 1;i &lt;= n;i++)&#123;</span><br><span class="line">            double p,l,v;cin &gt;&gt; p &gt;&gt; l &gt;&gt; v;</span><br><span class="line">            sum -= l;</span><br><span class="line">            sum += 2*l/v;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(&quot;Case %d: %.3lf\n\n&quot;,++cnt,sum);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把题意读懂，深搜，注意精度问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">typedef long double lf;</span><br><span class="line">typedef unsigned long long ull;</span><br><span class="line">typedef pair&lt;int,int&gt;P;</span><br><span class="line">typedef pair&lt;int,char&gt;Q;</span><br><span class="line">const int inf = 0x7f7f7f7f;</span><br><span class="line">const long long INF = 2e18;</span><br><span class="line">const unsigned long long base = 1313131;/*双hash知识点*/</span><br><span class="line">const long long base1 = 131;</span><br><span class="line">const long long mod =  1e9+7;</span><br><span class="line">const double PI = acos(-1);</span><br><span class="line">const int N = 1e6+10;</span><br><span class="line">const double eps = 1e+6;</span><br><span class="line">inline int read()&#123;int x=0,f=1;char ch=getchar();while(ch&lt;&#x27;0&#x27;||ch&gt;&#x27;9&#x27;)&#123;if(ch==&#x27;-&#x27;)f=-1;ch=getchar();&#125;while(ch&gt;=&#x27;0&#x27;&amp;&amp;ch&lt;=&#x27;9&#x27;)&#123;x=x*10+ch-&#x27;0&#x27;;ch=getchar();&#125;return x*f;&#125;</span><br><span class="line">inline string readstring()&#123;string str;char s=getchar();while(s==&#x27; &#x27;||s==&#x27;\n&#x27;||s==&#x27;\r&#x27;)&#123;s=getchar();&#125;while(s!=&#x27; &#x27;&amp;&amp;s!=&#x27;\n&#x27;&amp;&amp;s!=&#x27;\r&#x27;)&#123;str+=s;s=getchar();&#125;return str;&#125;</span><br><span class="line">int random(int n)&#123;return (int)(rand()*rand())%n;&#125;</span><br><span class="line">void writestring(string s)&#123;int n = s.size();for(int i = 0;i &lt; n;i++)&#123;printf(&quot;%c&quot;,s[i]);&#125;&#125;</span><br><span class="line">/*</span><br><span class="line"> https://www.luogu.com.cn/problem/CF235B</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11212</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17761</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11191</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17905</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17583/B</span><br><span class="line"> */</span><br><span class="line">/*</span><br><span class="line">a[1] = 1;a[2] = 3;a[3] = 5;</span><br><span class="line">int k = lower_bound(a+1,a+4,3)-a;</span><br><span class="line">k = 2*/</span><br><span class="line">bool is_prime(int n)&#123;if(n &lt; 2) return false;for(int i = 2;i*i &lt;= n;i++)&#123;if(n%i == 0) return false;&#125;return true;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">double dfs(double c,double m,double p,double v)&#123;</span><br><span class="line">    double ret = p/eps;</span><br><span class="line">    for(int i = 0;i &lt; 2;i++,swap(c,m))&#123;</span><br><span class="line">        if(c&gt;0)&#123;</span><br><span class="line">            if(c&gt;v)&#123;</span><br><span class="line">                if(m &gt; 0) ret += (c/eps)*(1+dfs(c-v,m+v/2,p+v/2,v));</span><br><span class="line">                else ret += (c/eps)*(1+dfs(c-v,0,p+v,v));</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                if(m &gt; 0) ret += (c/eps)*(1+dfs(0,m+c/2,p+c/2,v));</span><br><span class="line">                else ret += (c/eps)*(1+dfs(0,0,p+c,v));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void solve()&#123;</span><br><span class="line">    double c,m,p,v;</span><br><span class="line">    cin &gt;&gt; c &gt;&gt; m &gt;&gt; p &gt;&gt; v;</span><br><span class="line">    c *= eps;</span><br><span class="line">    m *= eps;</span><br><span class="line">    p *= eps;</span><br><span class="line">    v *= eps;</span><br><span class="line">    printf(&quot;%.12lf\n&quot;,dfs(c,m,p,v));</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    //freopen(&quot;E:/ACM/test/in.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    //freopen(&quot;E:/ACM/test/out.txt&quot;,&quot;w&quot;,stdout);</span><br><span class="line">    //srand((unsigned)time(NULL));</span><br><span class="line">    int t = read();</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -224,6 +226,8 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B/" rel="tag"># 数学期望</a>
+              <a href="/tags/%E6%A6%82%E7%8E%87/" rel="tag"># 概率</a>
+              <a href="/tags/%E6%B7%B1%E6%90%9C/" rel="tag"># 深搜</a>
           </div>
 
         
@@ -232,13 +236,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/09/C-Great-Graphs/" rel="prev" title="C. Great Graphs">
-      <i class="fa fa-chevron-left"></i> C. Great Graphs
+    <a href="/2021/07/11/CF1542C-Strange-Function/" rel="prev" title="CF1542C Strange Function">
+      <i class="fa fa-chevron-left"></i> CF1542C Strange Function
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/07/10/P4316-%E7%BB%BF%E8%B1%86%E8%9B%99%E7%9A%84%E5%BD%92%E5%AE%BF/" rel="next" title="P4316 绿豆蛙的归宿">
-      P4316 绿豆蛙的归宿 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     

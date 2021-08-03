@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1543&#x2F;problem&#x2F;C 解题思路：">
+  <meta name="description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P5091 解题思路：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C. Need for Pink Slips">
-<meta property="og:url" content="http://example.com/2021/07/11/C-Need-for-Pink-Slips/index.html">
+<meta property="og:title" content="扩展欧拉定理">
+<meta property="og:url" content="http://example.com/2021/08/03/%E6%89%A9%E5%B1%95%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/index.html">
 <meta property="og:site_name" content="枫叶">
-<meta property="og:description" content="https:&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1543&#x2F;problem&#x2F;C 解题思路：">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;problem&#x2F;P5091 解题思路：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-11T13:53:29.000Z">
-<meta property="article:modified_time" content="2021-07-11T14:04:19.885Z">
+<meta property="article:published_time" content="2021-08-03T02:49:21.000Z">
+<meta property="article:modified_time" content="2021-08-03T02:53:47.237Z">
 <meta property="article:author" content="FY">
-<meta property="article:tag" content="数学期望">
-<meta property="article:tag" content="概率">
-<meta property="article:tag" content="深搜">
+<meta property="article:tag" content="扩展欧拉定理">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/07/11/C-Need-for-Pink-Slips/">
+<link rel="canonical" href="http://example.com/2021/08/03/%E6%89%A9%E5%B1%95%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>C. Need for Pink Slips | 枫叶</title>
+  <title>扩展欧拉定理 | 枫叶</title>
   
 
 
@@ -163,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/11/C-Need-for-Pink-Slips/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/03/%E6%89%A9%E5%B1%95%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C. Need for Pink Slips
+          扩展欧拉定理
         </h1>
 
         <div class="post-meta">
@@ -187,7 +185,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-11 21:53:29 / 修改时间：22:04:19" itemprop="dateCreated datePublished" datetime="2021-07-11T21:53:29+08:00">2021-07-11</time>
+              <time title="创建时间：2021-08-03 10:49:21 / 修改时间：10:53:47" itemprop="dateCreated datePublished" datetime="2021-08-03T10:49:21+08:00">2021-08-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,11 +208,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1543/problem/C">https://codeforces.com/contest/1543/problem/C</a></p>
+        <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5091">https://www.luogu.com.cn/problem/P5091</a></p>
 <h1 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h1><span id="more"></span>
 
-<p>把题意读懂，深搜，注意精度问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">typedef long long ll;</span><br><span class="line">typedef long double lf;</span><br><span class="line">typedef unsigned long long ull;</span><br><span class="line">typedef pair&lt;int,int&gt;P;</span><br><span class="line">typedef pair&lt;int,char&gt;Q;</span><br><span class="line">const int inf = 0x7f7f7f7f;</span><br><span class="line">const long long INF = 2e18;</span><br><span class="line">const unsigned long long base = 1313131;/*双hash知识点*/</span><br><span class="line">const long long base1 = 131;</span><br><span class="line">const long long mod =  1e9+7;</span><br><span class="line">const double PI = acos(-1);</span><br><span class="line">const int N = 1e6+10;</span><br><span class="line">const double eps = 1e+6;</span><br><span class="line">inline int read()&#123;int x=0,f=1;char ch=getchar();while(ch&lt;&#x27;0&#x27;||ch&gt;&#x27;9&#x27;)&#123;if(ch==&#x27;-&#x27;)f=-1;ch=getchar();&#125;while(ch&gt;=&#x27;0&#x27;&amp;&amp;ch&lt;=&#x27;9&#x27;)&#123;x=x*10+ch-&#x27;0&#x27;;ch=getchar();&#125;return x*f;&#125;</span><br><span class="line">inline string readstring()&#123;string str;char s=getchar();while(s==&#x27; &#x27;||s==&#x27;\n&#x27;||s==&#x27;\r&#x27;)&#123;s=getchar();&#125;while(s!=&#x27; &#x27;&amp;&amp;s!=&#x27;\n&#x27;&amp;&amp;s!=&#x27;\r&#x27;)&#123;str+=s;s=getchar();&#125;return str;&#125;</span><br><span class="line">int random(int n)&#123;return (int)(rand()*rand())%n;&#125;</span><br><span class="line">void writestring(string s)&#123;int n = s.size();for(int i = 0;i &lt; n;i++)&#123;printf(&quot;%c&quot;,s[i]);&#125;&#125;</span><br><span class="line">/*</span><br><span class="line"> https://www.luogu.com.cn/problem/CF235B</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11212</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17761</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/11191</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17905</span><br><span class="line"> https://ac.nowcoder.com/acm/contest/17583/B</span><br><span class="line"> */</span><br><span class="line">/*</span><br><span class="line">a[1] = 1;a[2] = 3;a[3] = 5;</span><br><span class="line">int k = lower_bound(a+1,a+4,3)-a;</span><br><span class="line">k = 2*/</span><br><span class="line">bool is_prime(int n)&#123;if(n &lt; 2) return false;for(int i = 2;i*i &lt;= n;i++)&#123;if(n%i == 0) return false;&#125;return true;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//除以eps，是因为输入的时候乘了eps</span><br><span class="line">double dfs(double c,double m,double p,double v)&#123;</span><br><span class="line">    double ret = p/eps;//拿到p的概率</span><br><span class="line">    for(int i = 0;i &lt; 2;i++,swap(c,m))&#123;</span><br><span class="line">        if(c&gt;0)&#123;</span><br><span class="line">            if(c&gt;v)&#123;</span><br><span class="line">                if(m &gt; 0) ret += (c/eps)*(1+dfs(c-v,m+v/2,p+v/2,v));//加一是因为要进行一次操作,需要乘以拿c的概率</span><br><span class="line">                else ret += (c/eps)*(1+dfs(c-v,0,p+v,v));</span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                if(m &gt; 0) ret += (c/eps)*(1+dfs(0,m+c/2,p+c/2,v));</span><br><span class="line">                else ret += (c/eps)*(1+dfs(0,0,p+c,v));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void solve()&#123;</span><br><span class="line">    double c,m,p,v;</span><br><span class="line">    cin &gt;&gt; c &gt;&gt; m &gt;&gt; p &gt;&gt; v;</span><br><span class="line">    c *= eps;</span><br><span class="line">    m *= eps;</span><br><span class="line">    p *= eps;</span><br><span class="line">    v *= eps;</span><br><span class="line">    printf(&quot;%.12lf\n&quot;,dfs(c,m,p,v));</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    //freopen(&quot;E:/ACM/test/in.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    //freopen(&quot;E:/ACM/test/out.txt&quot;,&quot;w&quot;,stdout);</span><br><span class="line">    //srand((unsigned)time(NULL));</span><br><span class="line">    int t = read();</span><br><span class="line">    while(t--)&#123;</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于公式中的b，是已经%phi之后，再与phi比较大小。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a,m,bm;</span><br><span class="line"><span class="keyword">int</span> phi = <span class="number">1</span>;</span><br><span class="line">string b;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Phi</span><span class="params">()</span></span>&#123;<span class="comment">//计算小于m并且与m互质的个数</span></span><br><span class="line">	<span class="keyword">int</span> mm = m; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>;i*i &lt;= mm;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(mm%i) <span class="keyword">continue</span>;</span><br><span class="line">		phi *= (i<span class="number">-1</span>);</span><br><span class="line">		mm /= i;</span><br><span class="line">		<span class="keyword">while</span>(mm%i == <span class="number">0</span>)&#123;</span><br><span class="line">			phi *= i;</span><br><span class="line">			mm /= i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(mm &gt; <span class="number">1</span>) phi *= (mm<span class="number">-1</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(p)&#123;</span><br><span class="line">		<span class="keyword">if</span>(p&amp;<span class="number">1</span>) ans = ((ll)(ans%m)*(a%m))%m;</span><br><span class="line">		p &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">		a = ((ll)(a%m)*(a%m))%m;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; m &gt;&gt; b;</span><br><span class="line">	a %= m;</span><br><span class="line">	<span class="built_in">Phi</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; b.<span class="built_in">length</span>();i++)&#123;</span><br><span class="line">		bm = bm*<span class="number">10</span>+(b[i]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(bm &gt;= phi) &#123;</span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">			bm %= phi;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">/*此时的bm在上面的运算中已经模除phi了，已经形成了一个新的bm，</span></span><br><span class="line"><span class="comment">    用这个新的bm与bm比较。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">	<span class="keyword">if</span>(bm &gt;= phi)&#123;</span><br><span class="line">		flag = <span class="number">1</span>;</span><br><span class="line">		bm %= phi;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(flag) bm += phi;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,<span class="built_in">qpow</span>(a,bm));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -225,9 +223,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B/" rel="tag"># 数学期望</a>
-              <a href="/tags/%E6%A6%82%E7%8E%87/" rel="tag"># 概率</a>
-              <a href="/tags/%E6%B7%B1%E6%90%9C/" rel="tag"># 深搜</a>
+              <a href="/tags/%E6%89%A9%E5%B1%95%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/" rel="tag"># 扩展欧拉定理</a>
           </div>
 
         
@@ -236,13 +232,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/07/11/CF1542C-Strange-Function/" rel="prev" title="CF1542C Strange Function">
-      <i class="fa fa-chevron-left"></i> CF1542C Strange Function
+    <a href="/2021/07/25/Black-and-white/" rel="prev" title="Black and white">
+      <i class="fa fa-chevron-left"></i> Black and white
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/07/12/F-Array-Stabilization-GCD-version/" rel="next" title="F. Array Stabilization (GCD version)">
-      F. Array Stabilization (GCD version) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
